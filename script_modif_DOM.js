@@ -65,11 +65,17 @@ let textArray = ["L’HyperText Markup Language, généralement abrégé HTML, e
 
 function changeViewButtons() {
     let card_button = document.querySelectorAll(".btn-group");
-    console.log(card_button)
     card_button.forEach (button =>{
         button.children[0].className = "btn btn-sm btn-success";
-        console.log(button.children[0].className)
     })
+}
+
+
+function pyramid() {
+    let new_empty = document.querySelectorAll(".album > div > .row")[0].children[5];
+    let last_card = document.querySelectorAll(".album > div > .row")[0];
+    last_card.insertBefore(new_empty,last_card.children[7]);
+
 }
 
 
@@ -80,3 +86,4 @@ populateImages(imagesArray);
 deleteLastCards();
 changeCardsText(textArray);
 changeViewButtons();
+pyramid()
