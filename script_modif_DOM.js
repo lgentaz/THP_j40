@@ -64,7 +64,12 @@ let textArray = ["L’HyperText Markup Language, généralement abrégé HTML, e
 
 
 function changeViewButtons() {
-    
+    let card_button = document.querySelectorAll(".btn-group");
+    console.log(card_button)
+    card_button.forEach (button =>{
+        button.children[0].className = "btn btn-sm btn-success";
+        console.log(button.children[0].className)
+    })
 }
 
 
